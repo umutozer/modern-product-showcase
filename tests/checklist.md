@@ -1,0 +1,1 @@
+# Kalite Kontrol Listesi - checkbox (- [ ]) formati: HTML, CSS, JS, responsive, SEO, guvenlik, performans, WCAG
