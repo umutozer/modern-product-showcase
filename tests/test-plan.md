@@ -1,0 +1,1 @@
+# Test Plani - fonksiyonel senaryolar, form validasyon, responsive, cross-browser, performans, erisilebilirlik
