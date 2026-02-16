@@ -1,0 +1,340 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  z-index: var(--z-header);
+  transition: var(--transition-normal);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.hero {
+  padding: calc(var(--spacing-3xl) + 60px) 0 var(--spacing-3xl);
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.95;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.2s ease;
+}
+
+.btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--text-dark);
+}
+
+.btn-primary:hover {
+  background: #F59E0B;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--bg-white);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--text-light);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.products {
+  padding: var(--spacing-3xl) 0;
+}
+
+.products-alt {
+  background: var(--text-light);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xl);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.product-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.product-image {
+  margin-bottom: var(--spacing-md);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.product-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.product-desc {
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.features {
+  padding: var(--spacing-3xl) 0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.features .section-title {
+  color: var(--text-light);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.feature-card {
+  text-align: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition-normal);
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.feature-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-text {
+  color: rgba(249, 250, 251, 0.8);
+  font-size: 0.875rem;
+}
+
+.contact {
+  padding: var(--spacing-3xl) 0;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-input.error {
+  border-color: #EF4444;
+}
+
+.form-error {
+  display: block;
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.form-success {
+  padding: var(--spacing-md);
+  background: #10B981;
+  color: white;
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+  display: none;
+}
+
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-text {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
